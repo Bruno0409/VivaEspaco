@@ -10,6 +10,35 @@ html {
     scroll-padding-top: 60px; /* Ajuste conforme a altura do seu cabeçalho fixo */
 }
 
+/* Garante que o item ocupe toda a tela no desktop */
+#header-carousel .carousel-item {
+  position: relative;
+  height: 100vh;
+  min-height: 600px; /* fallback */
+}
+
+/* Faz a imagem preencher toda a área */
+#header-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cobre toda a tela sem distorcer */
+  object-position: 55% center;
+}
+
+/* Ajuste específico para telas pequenas (mobile) */
+@media (max-width: 768px) {
+  #header-carousel .carousel-item {
+    height: 95vh; /* força mais altura */
+  }
+
+  #header-carousel .carousel-caption {
+    bottom: 5%; /* sobe o texto */
+    transform: translateY(15%);
+  }
+}
+
+
+
 
 .back-to-top {
     position: fixed;
@@ -143,7 +172,6 @@ html {
     display: flex;
     align-items: center;
     text-align: start;
-    background: rgba(0, 0, 0, .4);
     z-index: 1;
 }
 
