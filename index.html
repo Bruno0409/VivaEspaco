@@ -1,512 +1,916 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>VivaEspaço - Imobiliária</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
+    <!-- Preconnect para fontes externas (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Preload das fontes essenciais para melhorar o carregamento -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+      as="style"
+      crossorigin="anonymous"
+    />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Font Awesome (Ícones) -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (Ícones) -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.min.css" rel="stylesheet">
-</head>
+    <!-- Libraries Stylesheet (Carregar de forma assíncrona ou diferida) -->
+    <link rel="preload" href="lib/animate/animate.min.css" as="style" />
+    <link rel="stylesheet" href="lib/animate/animate.min.css" />
 
-<body>
+    <link
+      rel="preload"
+      href="lib/owlcarousel/assets/owl.carousel.min.css"
+      as="style"
+    />
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" />
+
+    <!-- Customized Bootstrap Stylesheet (Carregar de forma assíncrona ou diferida) -->
+    <link rel="preload" href="css/bootstrap.min.css" as="style" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Template Stylesheet (CSS principal) - Minificado -->
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="stylesheet" href="css/style.min.css" />
+
+    <!-- Melhorar o desempenho da renderização -->
+    <noscript>
+      <link rel="stylesheet" href="css/style.min.css" />
+    </noscript>
+  </head>
+
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0"><i class="fa fa-home text-primary me-3"></i></i>VivaEspaço</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-3 py-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Início</a>
-                <a href="#sobre" class="nav-item nav-link">Sobre</a>
-                <a href="#diferenciais" class="nav-item nav-link">Diferenciais</a>
-                <a href="#imoveis" class="nav-item nav-link">Imóveis</a>
-                <a href="#contato" class="nav-item nav-link">Contato</a>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0"
+    >
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+          <i class="fa fa-home text-primary me-3"></i>VivaEspaço
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+        aria-label="Alternar navegação"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-3 py-lg-0">
+          <a
+            href="index.html"
+            class="nav-item nav-link active"
+            aria-label="Ir para a página inicial"
+            >Início</a
+          >
+          <a
+            href="#sobre"
+            class="nav-item nav-link"
+            aria-label="Ir para a seção Sobre"
+            >Sobre</a
+          >
+          <a
+            href="#diferenciais"
+            class="nav-item nav-link"
+            aria-label="Ir para os Diferenciais"
+            >Diferenciais</a
+          >
+          <a
+            href="#imoveis"
+            class="nav-item nav-link"
+            aria-label="Ir para a seção Imóveis"
+            >Imóveis</a
+          >
+          <a
+            href="#contato"
+            class="nav-item nav-link"
+            aria-label="Ir para a seção Contato"
+            >Contato</a
+          >
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/heronovo.webp" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-lg-10">
-                                    <h5 class="text-light mb-3 animated slideInDown">Bem-vindo à VivaEspaço Imobiliária</h5>
-                                    <h1 class="display-2 text-light mb-3 animated slideInDown">Seu novo lar começa aqui.</h1>
-                                    <ol class="breadcrumb mb-4 pb-2">
-                                        <li class="breadcrumb-item fs-5 text-light">Casas e apartamentos selecionados nas melhores regiões.</li>
-                                    </ol>
-                                    <a href="" class="btn btn-primary py-3 px-5" style="font-size: 20px;">Começar agora</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>             
+      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100" src="img/heronovo.webp" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-10">
+                    <h5 class="text-light mb-3 animated slideInDown">
+                      Bem-vindo à VivaEspaço Imobiliária
+                    </h5>
+                    <h1 class="display-2 text-light mb-3 animated slideInDown">
+                      Seu novo lar começa aqui.
+                    </h1>
+                    <ol class="breadcrumb mb-4 pb-2">
+                      <li class="breadcrumb-item fs-5 text-light">
+                        Casas e apartamentos selecionados nas melhores regiões.
+                      </li>
+                    </ol>
+                    <a
+                      href=""
+                      class="btn btn-primary py-3 px-5"
+                      style="font-size: 20px"
+                      >Começar agora</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Carousel End -->
 
-
     <!-- About Start -->
     <div class="container-xxl py-5" id="sobre">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/img7.webp" alt="" style="object-fit: cover;">
-                        <div class="position-absolute top-0 start-0 bg-white pe-3 pb-3" style="width: 200px; height: 200px;">
-                            <div class="d-flex flex-column justify-content-center text-center bg-primary h-100 p-3">
-                                <h1 class="text-white">12</h1>
-                                <h2 class="text-white">Anos</h2>
-                                <h5 class="text-white mb-0">Experiência</h5>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div
+              class="position-relative overflow-hidden ps-5 pt-5 h-100"
+              style="min-height: 400px"
+            >
+              <img
+                class="position-absolute w-100 h-100"
+                src="img/img7.webp"
+                alt=""
+                style="object-fit: cover"
+              />
+              <div
+                class="position-absolute top-0 start-0 bg-white pe-3 pb-3"
+                style="width: 200px; height: 200px"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center text-center bg-primary h-100 p-3"
+                >
+                  <h1 class="text-white">12</h1>
+                  <h2 class="text-white">Anos</h2>
+                  <h5 class="text-white mb-0">Experiência</h5>
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <div class="border-start border-5 border-primary ps-4 mb-5">
-                            <h6 class="text-body text-uppercase mb-2">Sobre nós</h6>
-                            <h1 class="display-6 mb-0">VivaEspaço: Onde Seu Novo Lar Se Torna Realidade</h1>
-                        </div>
-                        <p>VivaEspaço imobiliária está no mercado há 12 anos, oferecendo uma curadoria especializada de imóveis que atendem às necessidades e sonhos dos nossos clientes. Nosso compromisso é garantir que cada negociação seja transparente, segura e eficiente.</p>
-                        <p class="mb-4">Com uma equipe de profissionais qualificados, buscamos sempre a excelência no atendimento e em todos os processos. </p>
-                        <div class="border-top mt-4 pt-4">
-                            <div class="row g-4">
-                                <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
-                                    <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                    <h6 class="mb-0">Curadoria Personalizada de Imóveis</h6>
-                                </div>
-                                <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
-                                    <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                    <h6 class="mb-0">Transparência e Segurança em Cada Negociação</h6>
-                                </div>
-                                <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
-                                    <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                    <h6 class="mb-0">Equipe Qualificada e Atendimento Exclusivo</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="h-100">
+              <div class="border-start border-5 border-primary ps-4 mb-5">
+                <h6 class="text-body text-uppercase mb-2">Sobre nós</h6>
+                <h1 class="display-6 mb-0">
+                  VivaEspaço: Onde Seu Novo Lar Se Torna Realidade
+                </h1>
+              </div>
+              <p>
+                VivaEspaço imobiliária está no mercado há 12 anos, oferecendo
+                uma curadoria especializada de imóveis que atendem às
+                necessidades e sonhos dos nossos clientes. Nosso compromisso é
+                garantir que cada negociação seja transparente, segura e
+                eficiente.
+              </p>
+              <p class="mb-4">
+                Com uma equipe de profissionais qualificados, buscamos sempre a
+                excelência no atendimento e em todos os processos.
+              </p>
+              <div class="border-top mt-4 pt-4">
+                <div class="row g-4">
+                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">
+                    <i
+                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                    ></i>
+                    <h6 class="mb-0">Curadoria Personalizada de Imóveis</h6>
+                  </div>
+                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.3s">
+                    <i
+                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                    ></i>
+                    <h6 class="mb-0">
+                      Transparência e Segurança em Cada Negociação
+                    </h6>
+                  </div>
+                  <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.5s">
+                    <i
+                      class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                    ></i>
+                    <h6 class="mb-0">
+                      Equipe Qualificada e Atendimento Exclusivo
+                    </h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- About End -->
 
-
     <!-- Facts Start -->
     <div class="container-fluid my-5 p-0">
-        <div class="row g-0">
-            <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                <div class="position-relative">
-                    <img class="img-fluid w-100" src="img/metrica.webp" alt="" style="width: 100%; height: 450px; object-fit: cover;">
-                    <div class="facts-overlay">
-                        <h1 class="display-1">01</h1>
-                        <h4 class="text-white mb-3">Diagnóstico e Identificação das Necessidades</h4>
-                        <p class="text-white">Entendemos as preferências e requisitos do cliente para oferecer soluções personalizadas e adequadas ao seu perfil e orçamento.</p>
-                    </div>
-                </div>
+      <div class="row g-0">
+        <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+          <div class="position-relative">
+            <img
+              class="img-fluid w-100"
+              src="img/metrica.webp"
+              alt=""
+              style="width: 100%; height: 450px; object-fit: cover"
+            />
+            <div class="facts-overlay">
+              <h1 class="display-1">01</h1>
+              <h4 class="text-white mb-3">
+                Diagnóstico e Identificação das Necessidades
+              </h4>
+              <p class="text-white">
+                Entendemos as preferências e requisitos do cliente para oferecer
+                soluções personalizadas e adequadas ao seu perfil e orçamento.
+              </p>
             </div>
-            <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                <div class="position-relative">
-                    <img class="img-fluid w-100" src="img/img8.webp" alt="" style="width: 100%; height: 450px; object-fit: cover;">
-                    <div class="facts-overlay">
-                        <h1 class="display-1">02</h1>
-                        <h4 class="text-white mb-3">Apresentação de Soluções Personalizadas</h4>
-                        <p class="text-white">Apresentamos imóveis que atendem especificamente às necessidades do cliente, destacando características e limitações de cada um.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                <div class="position-relative">
-                    <img class="img-fluid w-100" src="img/maos.webp" alt="" style="width: 100%; height: 450px; object-fit: cover;">
-                    <div class="facts-overlay">
-                        <h1 class="display-1">03</h1>
-                        <h4 class="text-white mb-3">Negociação e Fechamento</h4>
-                        <p class="text-white">Facilitamos a negociação entre as partes, ajustando valores, condições e prazos para garantir um acordo satisfatório e justo.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                <div class="position-relative">
-                    <img class="img-fluid w-100" src="img/contra.webp" alt="" style="width: 100%; height: 450px; object-fit: cover;">
-                    <div class="facts-overlay">
-                        <h1 class="display-1">04</h1>
-                        <h4 class="text-white mb-3">Assinatura do Contrato e Pós-Venda</h4>
-                        <p class="text-white">Formalizamos o contrato e acompanhamos o cliente, garantindo a entrega do imóvel e prestando suporte para resolver quaisquer questões pós-venda.</p>                     
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+          <div class="position-relative">
+            <img
+              class="img-fluid w-100"
+              src="img/img8.webp"
+              alt=""
+              style="width: 100%; height: 450px; object-fit: cover"
+            />
+            <div class="facts-overlay">
+              <h1 class="display-1">02</h1>
+              <h4 class="text-white mb-3">
+                Apresentação de Soluções Personalizadas
+              </h4>
+              <p class="text-white">
+                Apresentamos imóveis que atendem especificamente às necessidades
+                do cliente, destacando características e limitações de cada um.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="position-relative">
+            <img
+              class="img-fluid w-100"
+              src="img/maos.webp"
+              alt=""
+              style="width: 100%; height: 450px; object-fit: cover"
+            />
+            <div class="facts-overlay">
+              <h1 class="display-1">03</h1>
+              <h4 class="text-white mb-3">Negociação e Fechamento</h4>
+              <p class="text-white">
+                Facilitamos a negociação entre as partes, ajustando valores,
+                condições e prazos para garantir um acordo satisfatório e justo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+          <div class="position-relative">
+            <img
+              class="img-fluid w-100"
+              src="img/contra.webp"
+              alt=""
+              style="width: 100%; height: 450px; object-fit: cover"
+            />
+            <div class="facts-overlay">
+              <h1 class="display-1">04</h1>
+              <h4 class="text-white mb-3">
+                Assinatura do Contrato e Pós-Venda
+              </h4>
+              <p class="text-white">
+                Formalizamos o contrato e acompanhamos o cliente, garantindo a
+                entrega do imóvel e prestando suporte para resolver quaisquer
+                questões pós-venda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Facts End -->
 
     <!-- Features Start -->
     <div class="container-xxl py-5" id="diferenciais">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="border-start border-5 border-primary ps-4 mb-5">
-                        <h1 class="display-6 mb-0">Escolher a VivaEspaço Imóveis é garantir uma experiência única.</h1>
-                    </div>
-                    <p class="mb-5">Oferecemos imóveis de qualidade, cuidadosamente selecionados, para garantir que cada investimento seja seguro e vantajoso. Entendemos que cada cliente é único, por isso trabalhamos com atendimento individualizado, ajudando você a tomar as melhores decisões, seja para adquirir a casa dos seus sonhos ou investir com segurança.</p>
-                    <div class="row gy-5 gx-4">
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                <h6 class="mb-0">Expertise no Mercado Imobiliário</h6>
-                            </div>
-                            <span>Com vasta experiência, nossa equipe entende o mercado e sabe identificar as melhores oportunidades, seja para compradores iniciantes ou investidores experientes.</span>
-                        </div>
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                <h6 class="mb-0">Atendimento Personalizado</h6>
-                            </div>
-                            <span>Nosso foco é entender suas necessidades individuais, oferecendo soluções que combinem com seu estilo de vida, preferências e orçamento.</span>
-                        </div>
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                <h6 class="mb-0">Imóveis Selecionados com Cuidado</h6>
-                            </div>
-                            <span>Selecionamos imóveis de alta qualidade, focando em localização, infraestrutura e valorização, garantindo um investimento seguro e valioso.</span>
-                        </div>
-                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                                <h6 class="mb-0">Processo Rápido e Descomplicado</h6>
-                            </div>
-                            <span>Nosso processo é ágil e sem burocracia, oferecendo uma experiência tranquila e eficiente, do primeiro contato à assinatura do contrato.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="position-relative overflow-hidden ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/img9.webp" alt="" style="object-fit: cover;">
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4 mb-5">
+              <h1 class="display-6 mb-0">
+                Escolher a VivaEspaço Imóveis é garantir uma experiência única.
+              </h1>
             </div>
+            <p class="mb-5">
+              Oferecemos imóveis de qualidade, cuidadosamente selecionados, para
+              garantir que cada investimento seja seguro e vantajoso. Entendemos
+              que cada cliente é único, por isso trabalhamos com atendimento
+              individualizado, ajudando você a tomar as melhores decisões, seja
+              para adquirir a casa dos seus sonhos ou investir com segurança.
+            </p>
+            <div class="row gy-5 gx-4">
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="d-flex align-items-center mb-3">
+                  <i
+                    class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                  ></i>
+                  <h6 class="mb-0">Expertise no Mercado Imobiliário</h6>
+                </div>
+                <span
+                  >Com vasta experiência, nossa equipe entende o mercado e sabe
+                  identificar as melhores oportunidades, seja para compradores
+                  iniciantes ou investidores experientes.</span
+                >
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                <div class="d-flex align-items-center mb-3">
+                  <i
+                    class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                  ></i>
+                  <h6 class="mb-0">Atendimento Personalizado</h6>
+                </div>
+                <span
+                  >Nosso foco é entender suas necessidades individuais,
+                  oferecendo soluções que combinem com seu estilo de vida,
+                  preferências e orçamento.</span
+                >
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="d-flex align-items-center mb-3">
+                  <i
+                    class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                  ></i>
+                  <h6 class="mb-0">Imóveis Selecionados com Cuidado</h6>
+                </div>
+                <span
+                  >Selecionamos imóveis de alta qualidade, focando em
+                  localização, infraestrutura e valorização, garantindo um
+                  investimento seguro e valioso.</span
+                >
+              </div>
+              <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                <div class="d-flex align-items-center mb-3">
+                  <i
+                    class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
+                  ></i>
+                  <h6 class="mb-0">Processo Rápido e Descomplicado</h6>
+                </div>
+                <span
+                  >Nosso processo é ágil e sem burocracia, oferecendo uma
+                  experiência tranquila e eficiente, do primeiro contato à
+                  assinatura do contrato.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div
+              class="position-relative overflow-hidden ps-5 pt-5 h-100"
+              style="min-height: 400px"
+            >
+              <img
+                class="position-absolute w-100 h-100"
+                src="img/img9.webp"
+                alt=""
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Features End -->
 
     <!-- Service Start -->
     <div class="container-xxl py-5" id="imoveis">
-        <div class="container">
-            <div class="row g-5 align-items-end mb-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="border-start border-5 border-primary ps-4">       
-                        <h1 class="display-6 mb-0">Disponíveis Imediatamente</h1>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-5 align-items-end mb-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4">
+              <h1 class="display-6 mb-0">Disponíveis Imediatamente</h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light overflow-hidden h-100">
-                        <img class="img-fluid" src="img/casa1.webp" alt=""style="width: 100%; height: 300px; object-fit: cover;">
-                        <div class="service-text position-relative text-center h-100 p-4">
-                            <h5 class="mb-3">Viva com Liberdade e Conforto</h5>
-                            <p>Casa charmosa com amplos cômodos, perfeita para quem busca conforto e liberdade. Com jardim e área externa, oferece momentos de lazer e descanso em um ambiente tranquilo e prático.</p>
-                            <a class="small" href="">Conheça<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light overflow-hidden h-100">
-                        <img class="img-fluid" src="img/apart1.webp" alt=""style="width: 100%; height: 300px; object-fit: cover;">
-                        <div class="service-text position-relative text-center h-100 p-4">
-                            <h5 class="mb-3">Ótima Opção para Quem Quer Investir</h5>
-                            <p>Casa perfeita para aluguel de temporada, com localização estratégica e espaços aconchegantes, oferecendo excelente retorno financeiro e conforto para os hóspedes.</p>
-                            <a class="small" href="">Conheça<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light overflow-hidden h-100">
-                        <img class="img-fluid" src="img/casa2.webp" alt=""style="width: 100%; height: 300px; object-fit: cover;">
-                        <div class="service-text position-relative text-center h-100 p-4">
-                            <h5 class="mb-3">O Refúgio Perfeito em Condomínio Fechado</h5>
-                            <p>Linda casa em condomínio fechado com segurança 24h, espaços amplos e área de lazer completa. Ideal para quem busca conforto, tranquilidade e qualidade de vida.</p>
-                            <a class="small" href="">Conheça<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-light overflow-hidden h-100">
-                        <img class="img-fluid" src="img/casa4.webp" alt=""style="width: 100%; height: 300px; object-fit: cover;">
-                        <div class="service-text position-relative text-center h-100 p-4">
-                            <h5 class="mb-3">Casa com Estilo Contemporâneo e Aconchegante</h5>
-                            <p>Casa com espaços amplos e decoração moderna, ideal para quem busca um ambiente acolhedor e prático, perfeito para lazer e convivência.</p>
-                            <a class="small" href="">Conheça<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-light overflow-hidden h-100">
-                        <img class="img-fluid" src="img/casa3.webp" alt=""style="width: 100%; height: 300px; object-fit: cover;">
-                        <div class="service-text position-relative text-center h-100 p-4">
-                            <h5 class="mb-3">Apartamento Moderno e Industrial</h5>
-                            <p>Um espaço contemporâneo, com o charme do estilo industrial, ideal tanto para quem busca um lar único quanto para quem deseja uma excelente oportunidade de investimento.</p>
-                            <a class="small" href="">Conheça<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-light overflow-hidden h-100">
-                        <img class="img-fluid" src="img/casa5.webp" alt=""style="width: 100%; height: 300px; object-fit: cover;">
-                        <div class="service-text position-relative text-center h-100 p-4">
-                            <h5 class="mb-3">Apartamento Iluminado e Aconchegante</h5>
-                            <p>Apartamento com ótima iluminação natural, piso em madeira e estilo clean, proporcionando um ambiente acolhedor, sofisticado e confortável.</p>
-                            <a class="small" href="">Conheça<i class="fa fa-arrow-right ms-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img
+                class="img-fluid"
+                src="img/casa1.webp"
+                alt=""
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h5 class="mb-3">Viva com Liberdade e Conforto</h5>
+                <p>
+                  Casa charmosa com amplos cômodos, perfeita para quem busca
+                  conforto e liberdade. Com jardim e área externa, oferece
+                  momentos de lazer e descanso em um ambiente tranquilo e
+                  prático.
+                </p>
+                <a class="small" href=""
+                  >Conheça<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img
+                class="img-fluid"
+                src="img/apart1.webp"
+                alt=""
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h5 class="mb-3">Ótima Opção para Quem Quer Investir</h5>
+                <p>
+                  Casa perfeita para aluguel de temporada, com localização
+                  estratégica e espaços aconchegantes, oferecendo excelente
+                  retorno financeiro e conforto para os hóspedes.
+                </p>
+                <a class="small" href=""
+                  >Conheça<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img
+                class="img-fluid"
+                src="img/casa2.webp"
+                alt=""
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h5 class="mb-3">O Refúgio Perfeito em Condomínio Fechado</h5>
+                <p>
+                  Linda casa em condomínio fechado com segurança 24h, espaços
+                  amplos e área de lazer completa. Ideal para quem busca
+                  conforto, tranquilidade e qualidade de vida.
+                </p>
+                <a class="small" href=""
+                  >Conheça<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img
+                class="img-fluid"
+                src="img/casa4.webp"
+                alt=""
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h5 class="mb-3">
+                  Casa com Estilo Contemporâneo e Aconchegante
+                </h5>
+                <p>
+                  Casa com espaços amplos e decoração moderna, ideal para quem
+                  busca um ambiente acolhedor e prático, perfeito para lazer e
+                  convivência.
+                </p>
+                <a class="small" href=""
+                  >Conheça<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img
+                class="img-fluid"
+                src="img/casa3.webp"
+                alt=""
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h5 class="mb-3">Apartamento Moderno e Industrial</h5>
+                <p>
+                  Um espaço contemporâneo, com o charme do estilo industrial,
+                  ideal tanto para quem busca um lar único quanto para quem
+                  deseja uma excelente oportunidade de investimento.
+                </p>
+                <a class="small" href=""
+                  >Conheça<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item bg-light overflow-hidden h-100">
+              <img
+                class="img-fluid"
+                src="img/casa5.webp"
+                alt=""
+                style="width: 100%; height: 300px; object-fit: cover"
+              />
+              <div class="service-text position-relative text-center h-100 p-4">
+                <h5 class="mb-3">Apartamento Iluminado e Aconchegante</h5>
+                <p>
+                  Apartamento com ótima iluminação natural, piso em madeira e
+                  estilo clean, proporcionando um ambiente acolhedor,
+                  sofisticado e confortável.
+                </p>
+                <a class="small" href=""
+                  >Conheça<i class="fa fa-arrow-right ms-3"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Service End -->
 
     <!-- FAQ Start -->
-<div class="container-xxl py-5" id="faq">
-    <div class="container">
+    <div class="container-xxl py-5" id="faq">
+      <div class="container">
         <div class="row g-5 align-items-end mb-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="border-start border-5 border-primary ps-4">
-                    <h1 class="display-6 mb-0">Perguntas Frequentes</h1>
-                </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="border-start border-5 border-primary ps-4">
+              <h1 class="display-6 mb-0">Perguntas Frequentes</h1>
             </div>
+          </div>
         </div>
         <div class="row g-4 justify-content-center">
-            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="accordion" id="faqAccordion">
-                    
-                    <!-- Item 1 -->
-                    <div class="accordion-item border-0 mb-3 shadow-sm">
-                        <h2 class="accordion-header" id="faqHeading1">
-                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                Como a VivaEspaço ajuda a encontrar o imóvel ideal?
-                            </button>
-                        </h2>
-                        <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-secondary">
-                                Começamos com uma conversa para entender seu perfil e preferências. A partir disso, fazemos uma curadoria personalizada e apresentamos imóveis que realmente combinam com o que você procura.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="accordion-item border-0 mb-3 shadow-sm">
-                        <h2 class="accordion-header" id="faqHeading2">
-                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                Vocês trabalham apenas com venda ou também com locação?
-                            </button>
-                        </h2>
-                        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-secondary">
-                                Atuamos tanto com venda quanto locação de imóveis residenciais e comerciais. Nosso objetivo é ajudar você a encontrar o espaço certo, seja para morar ou investir.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="accordion-item border-0 mb-3 shadow-sm">
-                        <h2 class="accordion-header" id="faqHeading3">
-                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                Os imóveis exibidos no site estão disponíveis imediatamente?
-                            </button>
-                        </h2>
-                        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-secondary">
-                                Sim. A seção “Disponíveis Imediatamente” mostra apenas imóveis prontos para visita e negociação, e o site é atualizado constantemente para manter as informações corretas.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div class="accordion-item border-0 mb-3 shadow-sm">
-                        <h2 class="accordion-header" id="faqHeading4">
-                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                Há algum custo para o atendimento ou busca de imóveis?
-                            </button>
-                        </h2>
-                        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-secondary">
-                                Não. Nosso atendimento é totalmente gratuito. A remuneração da imobiliária ocorre somente após a conclusão do negócio, garantindo transparência e segurança.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="accordion-item border-0 mb-3 shadow-sm">
-                        <h2 class="accordion-header" id="faqHeading5">
-                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                Como posso agendar uma visita a um imóvel?
-                            </button>
-                        </h2>
-                        <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-secondary">
-                                Você pode agendar facilmente pelo site ou pelo WhatsApp. Nossa equipe entrará em contato para confirmar o melhor horário e acompanhar você durante a visita.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="accordion-item border-0 mb-3 shadow-sm">
-                        <h2 class="accordion-header" id="faqHeading6">
-                            <button class="accordion-button collapsed fw-bold text-dark" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                                O que diferencia a VivaEspaço de outras imobiliárias?
-                            </button>
-                        </h2>
-                        <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body text-secondary">
-                                Nos destacamos pela curadoria personalizada, transparência e atendimento humanizado. Cada cliente recebe um acompanhamento exclusivo em todas as etapas do processo.
-                            </div>
-                        </div>
-                    </div>
-
+          <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="accordion" id="faqAccordion">
+              <!-- Item 1 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="faqHeading1">
+                  <button
+                    class="accordion-button collapsed fw-bold text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                    aria-expanded="false"
+                    aria-controls="faq1"
+                  >
+                    Como a VivaEspaço ajuda a encontrar o imóvel ideal?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading1"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Começamos com uma conversa para entender seu perfil e
+                    preferências. A partir disso, fazemos uma curadoria
+                    personalizada e apresentamos imóveis que realmente combinam
+                    com o que você procura.
+                  </div>
                 </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="faqHeading2">
+                  <button
+                    class="accordion-button collapsed fw-bold text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                    aria-expanded="false"
+                    aria-controls="faq2"
+                  >
+                    Vocês trabalham apenas com venda ou também com locação?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading2"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Atuamos tanto com venda quanto locação de imóveis
+                    residenciais e comerciais. Nosso objetivo é ajudar você a
+                    encontrar o espaço certo, seja para morar ou investir.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="faqHeading3">
+                  <button
+                    class="accordion-button collapsed fw-bold text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                    aria-expanded="false"
+                    aria-controls="faq3"
+                  >
+                    Os imóveis exibidos no site estão disponíveis imediatamente?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading3"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Sim. A seção “Disponíveis Imediatamente” mostra apenas
+                    imóveis prontos para visita e negociação, e o site é
+                    atualizado constantemente para manter as informações
+                    corretas.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="faqHeading4">
+                  <button
+                    class="accordion-button collapsed fw-bold text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                    aria-expanded="false"
+                    aria-controls="faq4"
+                  >
+                    Há algum custo para o atendimento ou busca de imóveis?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading4"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Não. Nosso atendimento é totalmente gratuito. A remuneração
+                    da imobiliária ocorre somente após a conclusão do negócio,
+                    garantindo transparência e segurança.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="faqHeading5">
+                  <button
+                    class="accordion-button collapsed fw-bold text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                    aria-expanded="false"
+                    aria-controls="faq5"
+                  >
+                    Como posso agendar uma visita a um imóvel?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading5"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Você pode agendar facilmente pelo site ou pelo WhatsApp.
+                    Nossa equipe entrará em contato para confirmar o melhor
+                    horário e acompanhar você durante a visita.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="faqHeading6">
+                  <button
+                    class="accordion-button collapsed fw-bold text-dark"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq6"
+                    aria-expanded="false"
+                    aria-controls="faq6"
+                  >
+                    O que diferencia a VivaEspaço de outras imobiliárias?
+                  </button>
+                </h2>
+                <div
+                  id="faq6"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="faqHeading6"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body text-secondary">
+                    Nos destacamos pela curadoria personalizada, transparência e
+                    atendimento humanizado. Cada cliente recebe um
+                    acompanhamento exclusivo em todas as etapas do processo.
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- FAQ End -->
+    <!-- FAQ End -->
 
     <!-- Appointment Start -->
-    <div class="container-fluid appointment py-5 wow fadeIn" data-wow-delay="0.1s" id="contato">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="border-start border-5 border-primary ps-4 mb-5">
-                        <h1 class="display-6 text-white mb-0">Entre em contato e vamos realizar seu sonho!</h1>
-                    </div>
-                    <p class="text-white mb-0">Descubra como podemos transformar o seu sonho em realidade. Estamos prontos para atender você da melhor forma possível!</p>
-                </div>
-                <div class="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark border-0" id="gname" placeholder="Gurdian Name">
-                                    <label for="gname">Seu Nome</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control bg-dark border-0" id="gmail" placeholder="Gurdian Email">
-                                    <label for="gmail">Seu E-mail</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark border-0" id="cname" placeholder="Child Name">
-                                    <label for="cname">Seu Telefone</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark border-0" id="cage" placeholder="Child Age">
-                                    <label for="cage">Tipo do imóvel</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-dark border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Mensagem</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit" style="font-size: 20px;">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div
+      class="container-fluid appointment py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+      id="contato"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-5 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+            <div class="border-start border-5 border-primary ps-4 mb-5">
+              <h1 class="display-6 text-white mb-0">
+                Entre em contato e vamos realizar seu sonho!
+              </h1>
             </div>
+            <p class="text-white mb-0">
+              Descubra como podemos transformar o seu sonho em realidade.
+              Estamos prontos para atender você da melhor forma possível!
+            </p>
+          </div>
+          <div class="col-lg-7 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+            <form>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-dark border-0"
+                      id="gname"
+                      placeholder="Gurdian Name"
+                    />
+                    <label for="gname">Seu Nome</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control bg-dark border-0"
+                      id="gmail"
+                      placeholder="Gurdian Email"
+                    />
+                    <label for="gmail">Seu E-mail</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-dark border-0"
+                      id="cname"
+                      placeholder="Child Name"
+                    />
+                    <label for="cname">Seu Telefone</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-dark border-0"
+                      id="cage"
+                      placeholder="Child Age"
+                    />
+                    <label for="cage">Tipo do imóvel</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control bg-dark border-0"
+                      placeholder="Leave a message here"
+                      id="message"
+                      style="height: 100px"
+                    ></textarea>
+                    <label for="message">Mensagem</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button
+                    class="btn btn-primary w-100 py-3"
+                    type="submit"
+                    style="font-size: 20px"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Appointment End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer pt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
+    <div
+      class="container-fluid bg-dark footer pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                <h1 class="m-0 text-white"><i class="fa fa-home text-primary me-3"></i>VivaEspaço</h1>
-                <p>Seu novo lar começa aqui. <br>Casas e apartamentos selecionados nas melhores regiões.</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-outline-primary me-0" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div>
+          <div class="col-lg-4 col-md-6">
+            <h1 class="m-0 text-white">
+              <i class="fa fa-home text-primary me-3"></i>VivaEspaço
+            </h1>
+            <p>
+              Seu novo lar começa aqui. <br />Casas e apartamentos selecionados
+              nas melhores regiões.
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square btn-outline-primary me-1" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary me-1" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary me-1" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-square btn-outline-primary me-0" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <h4 class="text-light mb-4">Endereço</h4>
-                <p><i class="fa fa-map-marker-alt me-3"></i>Rua dos Ipês 2323, Moema, SP</p>
-                <p><i class="fa fa-phone-alt me-3"></i>11 3000-0000</p>
-                <p><i class="fa fa-envelope me-3"></i>www.vivaespaco.com.br</p>
-            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h4 class="text-light mb-4">Endereço</h4>
+            <p>
+              <i class="fa fa-map-marker-alt me-3"></i>Rua dos Ipês 2323, Moema,
+              SP
+            </p>
+            <p><i class="fa fa-phone-alt me-3"></i>11 3000-0000</p>
+            <p><i class="fa fa-envelope me-3"></i>www.vivaespaco.com.br</p>
+          </div>
         </div>
-    </div>
-    <div class="container-fluid copyright">
+      </div>
+      <div class="container-fluid copyright">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">VivaEspaço Imobiliária</a>, Todos os Direitos Reservados
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                </div>
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a href="#">VivaEspaço Imobiliária</a>, Todos os Direitos
+              Reservados
             </div>
+            <div class="col-md-6 text-center text-md-end">
+              Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
     <!-- Footer End -->
 
@@ -520,6 +924,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
