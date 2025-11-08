@@ -14,20 +14,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload das fontes essenciais para melhorar o carregamento -->
+    <!-- Google Fonts (com display=swap para melhorar o FCP) -->
     <link
-      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
-      as="style"
-      crossorigin="anonymous"
+      rel="stylesheet"
     />
 
-    <!-- Font Awesome (Ícones) -->
-    <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      as="style"
-    />
+    <!-- Font Awesome (Ícones) - Carregar de forma assíncrona -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
@@ -35,38 +28,30 @@
 
     <!-- Bootstrap Icons (Ícones) -->
     <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      as="style"
-    />
-    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
 
-    <!-- Libraries Stylesheet (Carregar de forma assíncrona ou diferida) -->
-    <link rel="preload" href="lib/animate/animate.min.css" as="style" />
+    <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="lib/animate/animate.min.css" />
-
-    <link
-      rel="preload"
-      href="lib/owlcarousel/assets/owl.carousel.min.css"
-      as="style"
-    />
     <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" />
 
-    <!-- Customized Bootstrap Stylesheet (Carregar de forma assíncrona ou diferida) -->
-    <link rel="preload" href="css/bootstrap.min.css" as="style" />
+    <!-- Customized Bootstrap Stylesheet -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-    <!-- Template Stylesheet (CSS principal) - Minificado -->
-    <link rel="preload" href="css/style.min.css" as="style" />
+    <!-- Template Stylesheet - Minificado -->
     <link rel="stylesheet" href="css/style.min.css" />
 
     <!-- Melhorar o desempenho da renderização -->
     <noscript>
       <link rel="stylesheet" href="css/style.min.css" />
     </noscript>
+
+    <!-- Scripts (Carregar de forma assíncrona ou defer) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
   </head>
 
   <body>
