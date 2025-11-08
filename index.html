@@ -139,7 +139,21 @@
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="w-100" src="img/heronovo.webp" alt="Image" />
+            <!-- Imagem otimizada com srcset e lazy loading -->
+            <img
+              class="w-100"
+              src="img/heronovo-1389x782.webp"
+              alt="Imagem de boas-vindas à VivaEspaço Imobiliária"
+              srcset="
+                img/heronovo-480w.webp      480w,
+                img/heronovo-768w.webp      768w,
+                img/heronovo-1389x782.webp 1389w
+              "
+              sizes="(max-width: 768px) 100vw, 
+                 (max-width: 1200px) 80vw, 
+                 100vw"
+              loading="lazy"
+            />
             <div class="carousel-caption">
               <div class="container">
                 <div class="row justify-content-center">
@@ -159,8 +173,9 @@
                       href=""
                       class="btn btn-primary py-3 px-5"
                       style="font-size: 20px"
-                      >Começar agora</a
                     >
+                      Começar agora
+                    </a>
                   </div>
                 </div>
               </div>
